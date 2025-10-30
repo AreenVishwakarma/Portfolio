@@ -319,7 +319,7 @@ body {
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 1rem;
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
@@ -329,7 +329,7 @@ body {
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     max-width: 600px;
     margin-bottom: 2rem;
     color: var(--text-description);
@@ -614,6 +614,26 @@ body {
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
         }
 
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            border-radius: 2px;
+        }
+
         /* Add staggered animation delays */
         .project-box:nth-child(1) { animation-delay: 0.1s; }
         .project-box:nth-child(2) { animation-delay: 0.2s; }
@@ -689,6 +709,10 @@ body {
             
             .project-desc {
                 font-size: 15px;
+            }
+
+            .section-title {
+                font-size: 2rem;
             }
         }
         
@@ -828,31 +852,130 @@ body {
     </header>
     <!-- Hero Section -->
     <section class="hero">
-        <h1 style="font-size:4rem;">Quiz Application</h1>
-        <p style="font-size:1.8rem;">Built a quiz application enabling multiple users to participate in quizzes simultaneously with real-time score updates.</p>
+        <h1>Quiz Application</h1>
+        <p>Created a results page that allows students to view and download their academic results in an organized and user-friendly interface.</p>
     </section>
-     <div class="project-list">
-        <h1 style="text-align: center;">Admin Panel</h1>
+         <div class="project-list">
         <div class="project-box">
             <div class="row">
                 <div class="project-col">
-                        <h1 class="project-title">Log-In</h1>
-                        <p class="project-desc">This JSP-based chat application where users must first log in through a JSP login page. The entered credentials are securely stored and verified from the database, ensuring proper authentication before accessing the chat system.</p>
+                    <h1 class="project-title">Login Page</h1>
+                    <p class="project-desc">To access the result, the student is required to enter their roll number and mother’s name as verification details. Once the details are submitted, the system validates the inputs and then redirects the student to the viewResult.jsp page, where their result is displayed in a clear and structured format. This ensures secure access and provides students with a simple way to view their results online.</p>
                     </div>
                 <div class="project-img-col">
-                    <img src="CA1.png" alt="Chat Page" class="project-img">
+                    <img src="" alt="Login Page" class="project-img">
                 </div>
             </div>
         </div>
-        <h1 style="text-align: center;">Student Panel</h1>
+                                    <h2 class="section-title">Admin Page</h2>
         <div class="project-box">
             <div class="row">
                 <div class="project-col">
-                        <h1 class="project-title">Chat Page</h1>
-                        <p class="project-desc">A real-time JSP-based chat application where users can log in securely and engage in conversations. The system allows sending text messages, sharing images, and replying to specific messages with a smooth and responsive interface. It also includes features like live message updates using AJAX, session-based authentication, and a modern UI built with Bootstrap for an interactive chatting experience.</p>
-                    </div>
+                    <h1 class="project-title">Admin Dashboard</h1>
+                    <p class="project-desc">On the viewResult.jsp page, the student’s result is automatically fetched from the database using the roll number and mother’s name provided earlier. The system retrieves the already stored result details from the DB and displays them in a clear format on the page. This allows students to directly view their marks and performance without needing any manual lookup, making the process simple, fast, and secure.</p>
+                </div>
                 <div class="project-img-col">
-                    <img src="CA2.png" alt="Chat Page" class="project-img">
+                    <img src="" alt="Login Page" class="project-img">
+                </div>
+            </div>
+        </div>
+        <div class="project-box">
+            <div class="row">
+                <div class="project-col">
+                    <h1 class="project-title">Add New Student</h1>
+                    <p class="project-desc">The admin dashboard provides an interface for adding new students to the system. Admins can enter the student's details, such as name, roll number, and other relevant information. Once submitted, the system validates the inputs and stores the new student record in the database, making it easy to manage student information.</p>
+                </div>
+                <div class="project-img-col">
+                    <img src="" alt="Login Page" class="project-img">
+                </div>
+            </div>
+        </div>
+        <div class="project-box">
+            <div class="row">
+                <div class="project-col">
+                    <h1 class="project-title">Delete Student</h1>
+                    <p class="project-desc">The admin dashboard provides an interface for deleting existing students from the system. Admins can search for a student by name or roll number, and once located, they can confirm the deletion. This process ensures that only authorized personnel can remove student records, maintaining the integrity of the database.</p>
+                </div>
+                <div class="project-img-col">
+                    <img src="" alt="Login Page" class="project-img">
+                </div>
+            </div>
+        </div>
+        <div class="project-box">
+            <div class="row">
+                <div class="project-col">
+                    <h1 class="project-title">Check Student Results</h1>
+                    <p class="project-desc">The admin dashboard provides an interface for checking student results. Admins can search for a student by name or roll number, and once located, they can view the student's grades and performance metrics. This feature is essential for monitoring student progress and identifying those who may need additional support.</p>
+                </div>
+                <div class="project-img-col">
+                    <img src="" alt="Login Page" class="project-img">
+                </div>
+            </div>
+        </div>
+        <div class="project-box">
+            <div class="row">
+                <div class="project-col">
+                    <h1 class="project-title">Add New Quiz</h1>
+                    <p class="project-desc">The admin dashboard provides an interface for adding new quizzes to the system. Admins can enter the quiz details, such as title, description, and questions. Once submitted, the system validates the inputs and stores the new quiz record in the database, making it easy to manage quizzes and assessments.</p>
+                </div>
+                <div class="project-img-col">
+                    <img src="" alt="Login Page" class="project-img">
+                </div>
+            </div>
+        </div>
+                                    <h2 class="section-title">Student Page</h2>
+        <div class="project-box">
+            <div class="row">
+                <div class="project-col">
+                    <h1 class="project-title">Student Dashboard</h1>
+                    <p class="project-desc">Additionally, students are provided with an option to download their result in PDF format. This feature allows them to keep a digital copy of their marks for future reference or printing purposes. The system generates the PDF directly from the stored result data, ensuring accuracy and convenience for the student.</p>
+                </div>
+                <div class="project-img-col">
+                    <img src="" alt="Login Page" class="project-img">
+                </div>
+            </div>
+        </div>
+        <div class="project-box">
+            <div class="row">
+                <div class="project-col">
+                    <h1 class="project-title">Select Quiz Subject</h1>
+                    <p class="project-desc">Additionally, students are provided with an option to download their result in PDF format. This feature allows them to keep a digital copy of their marks for future reference or printing purposes. The system generates the PDF directly from the stored result data, ensuring accuracy and convenience for the student.</p>
+                </div>
+                <div class="project-img-col">
+                    <img src="" alt="Login Page" class="project-img">
+                </div>
+            </div>
+        </div>
+        <div class="project-box">
+            <div class="row">
+                <div class="project-col">
+                    <h1 class="project-title">Give Quiz</h1>
+                    <p class="project-desc">The student dashboard includes a feature for taking quizzes. Students can select a quiz from the available options and begin the assessment. The system tracks their progress and provides immediate feedback on their performance, helping them identify areas for improvement.</p>
+                </div>
+                <div class="project-img-col">
+                    <img src="" alt="Login Page" class="project-img">
+                </div>
+            </div>
+        </div>
+        <div class="project-box">
+            <div class="row">
+                <div class="project-col">
+                    <h1 class="project-title">Score</h1>
+                    <p class="project-desc">The student dashboard includes a feature for viewing quiz scores. After completing a quiz, students can check their scores and review their performance. The system provides detailed feedback on their answers, helping them understand their strengths and weaknesses.</p>
+                </div>
+                <div class="project-img-col">
+                    <img src="" alt="Login Page" class="project-img">
+                </div>
+            </div>
+        </div>
+        <div class="project-box">
+            <div class="row">
+                <div class="project-col">
+                    <h1 class="project-title">Result</h1>
+                    <p class="project-desc">The student dashboard includes a feature for viewing quiz results. After completing a quiz, students can check their results and review their performance. The system provides detailed feedback on their answers, helping them understand their strengths and weaknesses.</p>
+                </div>
+                <div class="project-img-col">
+                    <img src="" alt="Login Page" class="project-img">
                 </div>
             </div>
         </div>
