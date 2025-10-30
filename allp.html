@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card">
+        <h1>Prodct1 </h1>
+        <h2>Sampel Producr</h2>
+        <button id="pro1">Add to Cart</button>
+    </div>
+    <div class="card">
+        <h1>Prodct1 </h1>
+        <h2>Sampel Producr</h2>
+        <button id="pro2">Add to Cart</button>
+    </div>
+    <div class="card">
+        <h1>Prodct1 </h1>
+        <h2>Sampel Producr</h2>
+        <button id="pro3">Add to Cart</button>
+    </div>
+    <div class="card">
+        <h1>Prodct1 </h1>
+        <h2>Sampel Producr</h2>
+        <button id="pro4">Add to Cart</button>
+    </div>
+    <div class="card">
+        <h1>Prodct1 </h1>
+        <h2>Sampel Producr</h2>
+        <button id="pro5">Add to Cart</button>
+    </div>
+    <div class="card">
+        <h1>Prodct1 </h1>
+        <h2>Sampel Producr</h2>
+        <button id="pro6">Add to Cart</button>
+    </div>
+
+    <button id="show-cart">Show All Cart Items</button>
+
+    <script>
+        const cartButtons = document.querySelectorAll('button[id^="pro"]');
+        cartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const productId = button.id;
+                alert(`Product added to cart: ${productId}`);
+                localStorage.setItem(productId, 'added');
+            });
+        });
+        document.getElementById('show-cart').addEventListener('click', () => {
+            let cartItems = 'Items in Cart:\n';
+            for (let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i);
+                cartItems += `${key}\n`;
+            }
+            alert(cartItems);
+        });
+    </script>
+</body>
+</html>
