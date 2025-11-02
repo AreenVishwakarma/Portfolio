@@ -853,14 +853,18 @@ body {
     <!-- Hero Section -->
     <section class="hero">
         <h1>Quiz Application</h1>
-        <p>Created a results page that allows students to view and download their academic results in an organized and user-friendly interface.</p>
+        <p>This is a web-based quiz application designed to facilitate online assessments for students and administrators.</p>
     </section>
          <div class="project-list">
         <div class="project-box">
             <div class="row">
                 <div class="project-col">
                     <h1 class="project-title">Login Page</h1>
-                    <p class="project-desc">To access the result, the student is required to enter their roll number and mother’s name as verification details. Once the details are submitted, the system validates the inputs and then redirects the student to the viewResult.jsp page, where their result is displayed in a clear and structured format. This ensures secure access and provides students with a simple way to view their results online.</p>
+                    <p class="project-desc">This is the main selection page where users need to choose whether they are a student or an admin.
+                        It serves as the entry point of the system, helping to navigate users to the correct login or dashboard area.
+                        The interface is designed to make the selection simple and user-friendly.
+                        Once the user selects a role, they are redirected to the respective login page.
+                        This separation ensures different functionalities for students and administrators.</p>
                     </div>
                 <div class="project-img-col">
                     <img src="quiz-index.png" alt="Login Page" class="project-img">
@@ -872,7 +876,11 @@ body {
             <div class="row">
                 <div class="project-col">
                     <h1 class="project-title">Admin Login</h1>
-                    <p class="project-desc">On the viewResult.jsp page, the student’s result is automatically fetched from the database using the roll number and mother’s name provided earlier. The system retrieves the already stored result details from the DB and displays them in a clear format on the page. This allows students to directly view their marks and performance without needing any manual lookup, making the process simple, fast, and secure.</p>
+                    <p class="project-desc">This is the admin login page, where authorized administrators can securely log in using their credentials.
+                        It validates the entered email and password from the database using JSP and Servlet.
+                        Proper authentication ensures that only admins can access sensitive data and features.
+                        In case of invalid credentials, appropriate error messages are displayed.
+                        Once verified, the admin is redirected to their dashboard for further operations.</p>
                 </div>
                 <div class="project-img-col">
                     <img src="quiz-A1.png" alt="Login Page" class="project-img">
@@ -883,7 +891,11 @@ body {
             <div class="row">
                 <div class="project-col">
                     <h1 class="project-title">Admin Dashboard</h1>
-                    <p class="project-desc">The admin dashboard provides an interface for adding new students to the system. Admins can enter the student's details, such as name, roll number, and other relevant information. Once submitted, the system validates the inputs and stores the new student record in the database, making it easy to manage student information.</p>
+                    <p class="project-desc">The admin dashboard acts as the main control center for the administrator.
+                        From here, the admin can add new students, delete existing ones, check results, or create new quizzes.
+                        It uses AJAX for smooth page transitions and updates without reloading.
+                        Each function is connected to a servlet that performs the corresponding database operations.
+                        This dashboard provides complete control over managing the quiz and student records.</p>
                 </div>
                 <div class="project-img-col">
                     <img src="quiz-A2.png" alt="Login Page" class="project-img">
@@ -894,7 +906,11 @@ body {
             <div class="row">
                 <div class="project-col">
                     <h1 class="project-title">Add New Student</h1>
-                    <p class="project-desc">The admin dashboard provides an interface for adding new students to the system. Admins can enter the student's details, such as name, roll number, and other relevant information. Once submitted, the system validates the inputs and stores the new student record in the database, making it easy to manage student information.</p>
+                    <p class="project-desc">This page allows the admin to add new student details into the database.
+                        The input form collects basic information like name, email, and password.
+                        Once submitted, data is sent to a Servlet that performs database insertion using MySQL.
+                        Validation ensures that duplicate or empty entries are avoided.
+                        The added students can later log in and participate in quizzes.</p>
                 </div>
                 <div class="project-img-col">
                     <img src="quiz-A3.png" alt="Login Page" class="project-img">
@@ -905,7 +921,11 @@ body {
             <div class="row">
                 <div class="project-col">
                     <h1 class="project-title">Delete Student</h1>
-                    <p class="project-desc">The admin dashboard provides an interface for deleting existing students from the system. Admins can search for a student by name or roll number, and once located, they can confirm the deletion. This process ensures that only authorized personnel can remove student records, maintaining the integrity of the database.</p>
+                    <p class="project-desc">This page displays the complete list of registered students from the database.
+                        The admin can view student information in a structured table format.
+                        It also includes an option to delete any student record when necessary.
+                        The delete action triggers a Servlet request that updates the database in real-time.
+                        This helps maintain an  up-to-date and accurate list of active students.</p>
                 </div>
                 <div class="project-img-col">
                     <img src="quiz-A4.png" alt="Login Page" class="project-img">
@@ -916,7 +936,11 @@ body {
             <div class="row">
                 <div class="project-col">
                     <h1 class="project-title">Select Student/Subject for Results</h1>
-                    <p class="project-desc">The admin dashboard provides an interface for selecting a student and subject to view results. Admins can choose a student from a dropdown list and then select the subject for which they want to see the results. This feature streamlines the process of accessing student performance data and helps in generating reports.</p>
+                    <p class="project-desc">On the Check Result page, the admin can view quiz results for specific students.
+                        A dropdown menu allows selection of student email and quiz subject.
+                        After selection, the system fetches the corresponding result from the database.
+                        This page uses AJAX to dynamically display data without reloading.
+                        It provides an efficient way for admins to monitor student performance.</p>
                 </div>
                 <div class="project-img-col">
                     <img src="quiz-A5.png" alt="Login Page" class="project-img">
@@ -927,7 +951,11 @@ body {
             <div class="row">
                 <div class="project-col">
                     <h1 class="project-title">See Result</h1>
-                    <p class="project-desc">The admin dashboard provides an interface for viewing student results. Admins can select a student and subject to see the corresponding grades and performance metrics. This feature is essential for monitoring student progress and identifying those who may need additional support.</p>
+                    <p class="project-desc">This page displays the detailed quiz result of a selected student.
+                        Each question is shown along with its options and the student’s selected answer.
+                        The system highlights whether the chosen answer is correct or incorrect.
+                        It also compares the answers with the correct ones stored in the database.
+                        This detailed view helps both admin and student understand performance better.</p>
                 </div>
                 <div class="project-img-col">
                     <img src="quiz-A6.png" alt="Login Page" class="project-img">
@@ -938,7 +966,11 @@ body {
             <div class="row">
                 <div class="project-col">
                     <h1 class="project-title">Add New Quiz</h1>
-                    <p class="project-desc">The admin dashboard provides an interface for adding new quizzes to the system. Admins can enter the quiz details, such as title, description, and questions. Once submitted, the system validates the inputs and stores the new quiz record in the database, making it easy to manage quizzes and assessments.</p>
+                    <p class="project-desc">Before creating a quiz, the admin must create a quiz table by entering a subject name.
+                        The system automatically generates a new table in MySQL for that subject.
+                        Afterward, the admin can add multiple questions, each with four options, a correct answer, and marks.
+                        All entries are inserted into the respective quiz table dynamically.
+                        This modular design allows adding quizzes for multiple subjects with ease.</p>
                 </div>
                 <div class="project-img-col">
                     <img src="quiz-A7.png" alt="Login Page" class="project-img">
