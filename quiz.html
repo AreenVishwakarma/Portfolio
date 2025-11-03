@@ -859,7 +859,7 @@ body {
         <div class="project-box">
             <div class="row">
                 <div class="project-col">
-                    <h1 class="project-title">Login Page</h1>
+                    <h1 class="project-title">Home Page</h1>
                     <p class="project-desc">This is the main selection page where users need to choose whether they are a student or an admin.
                         It serves as the entry point of the system, helping to navigate users to the correct login or dashboard area.
                         The interface is designed to make the selection simple and user-friendly.
@@ -982,7 +982,11 @@ body {
             <div class="row">
                 <div class="project-col">
                     <h1 class="project-title">Student Login</h1>
-                    <p class="project-desc">Additionally, students are provided with an option to download their result in PDF format. This feature allows them to keep a digital copy of their marks for future reference or printing purposes. The system generates the PDF directly from the stored result data, ensuring accuracy and convenience for the student.</p>
+                    <p class="project-desc">This is the student login page, where students can securely access the system using their registered credentials.
+                        The login details are verified with the MySQL database using JSP and Servlet for authentication.
+                        If the credentials are valid, the student is redirected to their dashboard.
+                        Invalid attempts display appropriate error messages to maintain security.
+                        This ensures that only authorized students can access the quiz portal.</p>
                 </div>
                 <div class="project-img-col">
                     <img src="quiz-S1.png" alt="Login Page" class="project-img">
@@ -993,7 +997,11 @@ body {
             <div class="row">
                 <div class="project-col">
                     <h1 class="project-title">Student Dashboard</h1>
-                    <p class="project-desc">Additionally, students are provided with an option to download their result in PDF format. This feature allows them to keep a digital copy of their marks for future reference or printing purposes. The system generates the PDF directly from the stored result data, ensuring accuracy and convenience for the student.</p>
+                    <p class="project-desc">The student dashboard serves as the main control area for students after login.
+                        From this page, students can participate in quizzes and view their results.
+                        It uses AJAX for smooth interactions without reloading the page.
+                        Each button is linked to servlets that handle database communication efficiently.
+                        This dashboard gives students easy access to their learning and performance data.</p>
                 </div>
                 <div class="project-img-col">
                     <img src="quiz-S2.png" alt="Login Page" class="project-img">
@@ -1004,7 +1012,11 @@ body {
             <div class="row">
                 <div class="project-col">
                     <h1 class="project-title">Select Quiz Subject</h1>
-                    <p class="project-desc">The student dashboard includes a feature for taking quizzes. Students can select a quiz from the available options and begin the assessment. The system tracks their progress and provides immediate feedback on their performance, helping them identify areas for improvement.</p>
+                    <p class="project-desc">In this section, the student must select a subject before starting the quiz.
+                        A dropdown or list of available subjects is fetched dynamically from the database.
+                        Once a subject is chosen, the student proceeds to take that specific quiz.
+                        The process ensures that the correct question set is loaded for the chosen subject.
+                        It provides a simple and interactive interface using JSP and AJAX.</p>
                 </div>
                 <div class="project-img-col">
                     <img src="quiz-S3.png" alt="Login Page" class="project-img">
@@ -1015,7 +1027,11 @@ body {
             <div class="row">
                 <div class="project-col">
                     <h1 class="project-title">Give Quiz</h1>
-                    <p class="project-desc">The student dashboard includes a feature for viewing quiz scores. After completing a quiz, students can check their scores and review their performance. The system provides detailed feedback on their answers, helping them understand their strengths and weaknesses.</p>
+                    <p class="project-desc">Here, the student will view the quiz questions for the selected subject.
+                        Each question is displayed along with four options, allowing one selection.
+                        The data is retrieved from the MySQL database and displayed using JSP.
+                        Once all answers are selected, they are submitted through a Servlet for evaluation.
+                        The use of AJAX ensures a smooth, real-time quiz experience without page reloads.</p>
                 </div>
                 <div class="project-img-col">
                     <img src="quiz-S4.png" alt="Login Page" class="project-img">
@@ -1026,7 +1042,11 @@ body {
             <div class="row">
                 <div class="project-col">
                     <h1 class="project-title">Score</h1>
-                    <p class="project-desc">The student dashboard includes a feature for viewing quiz results. After completing a quiz, students can check their results and review their performance. The system provides detailed feedback on their answers, helping them understand their strengths and weaknesses.</p>
+                    <p class="project-desc">After completing the quiz, students can view their quiz score on this page.
+                        The marks are calculated based on correct answers and stored in the database.
+                        The score is displayed instantly using AJAX to avoid page refresh.
+                        This feature helps students analyze their quiz performance quickly.
+                        It provides an interactive and responsive result-viewing experience.</p>
                 </div>
                 <div class="project-img-col">
                     <img src="quiz-S5.png" alt="Login Page" class="project-img">
@@ -1037,7 +1057,11 @@ body {
             <div class="row">
                 <div class="project-col">
                     <h1 class="project-title">Result</h1>
-                    <p class="project-desc">The student dashboard includes a feature for viewing quiz results. After completing a quiz, students can check their results and review their performance. The system provides detailed feedback on their answers, helping them understand their strengths and weaknesses.</p>
+                    <p class="project-desc">In the Show Result section, students can review their quiz performance in detail.
+                        Each question is displayed along with the selected answer and the correct answer.
+                        The system highlights whether each response was correct or incorrect.
+                        All data is dynamically fetched from the MySQL database using Servlets.
+                        This detailed comparison helps students learn from their mistakes and improve.</p>
                 </div>
                 <div class="project-img-col">
                     <img src="quiz-S6.png" alt="Login Page" class="project-img">
